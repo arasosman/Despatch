@@ -40,3 +40,16 @@ if use windows exec this
 
 test indcluded PhpCS, PhpMD and PhpUnit
 I plan to add more detailed tests about import operations in a more comfortable time.
+
+###Command
+
+#### php artisan sync:order
+    
+    It pulls the order list from the market api and writes it to the queue for later processing.
+    If the request does not come in a single list, other pages are also queued.
+
+#### php artisan request_queue:work
+
+    triggers two jobs to process the queue
+    It takes the order id from the queue and get order data from service 
+        and imports it to the database together with its relations.
