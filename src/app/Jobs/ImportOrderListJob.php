@@ -59,7 +59,7 @@ class ImportOrderListJob implements ShouldQueue
             }
 
             logger('OrderSyncCommand');
-            $this->getOrderEndImportQueue(json_decode($orderInfo->value, true));
+            $this->getOrderAndImportQueue(json_decode($orderInfo->value, true));
 
             $orderInfo->delete();
             $orderInfo = $this->requestRepository->findByType("order_list");

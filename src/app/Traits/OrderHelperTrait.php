@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\RateLimiter;
 
 trait OrderHelperTrait
 {
-    public function getOrderEndImportQueue($params)
+    public function getOrderAndImportQueue($params)
     {
         RateLimiter::hit('market-api');
 

@@ -47,7 +47,7 @@ class OrderSyncCommand extends Command
 
         if (RateLimiter::remaining('market-api', 30)) {
             logger('OrderSyncCommand');
-            $orderResult = $this->getOrderEndImportQueue($params);
+            $orderResult = $this->getOrderAndImportQueue($params);
 
             /**
              * Diğer sayfalarıda kuyruğa atıyoruz
