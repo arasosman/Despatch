@@ -24,7 +24,10 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-        $schedule->command('sync:orders')->everyMinute();
+        $schedule->command('sync:orders')
+            ->everyMinute()
+            ->onOneServer()
+            ->withoutOverlapping();
     }
 
     /**
