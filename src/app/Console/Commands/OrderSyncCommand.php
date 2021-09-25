@@ -62,10 +62,10 @@ class OrderSyncCommand extends Command
      * @param int $last_page
      * @param array $params
      */
-    private function orderListNextPagesAddQueue(int $last_page, array $params): void
+    private function orderListNextPagesAddQueue(int $lastPage, array $params): void
     {
-        if ($last_page > 1) {
-            foreach (range(2, $last_page) as $page) {
+        if ($lastPage > 1) {
+            foreach (range(2, $lastPage) as $page) {
                 $this->requestRepository->create([
                     'type' => "order_list",
                     'value' => json_encode(array_merge($params, ['page' => $page]))

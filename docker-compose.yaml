@@ -16,7 +16,7 @@ services:
     networks:
       - laravel
 
-  php:
+  app:
     build: ./src
     restart: always
     expose:
@@ -40,5 +40,14 @@ services:
       MYSQL_ROOT_PASSWORD: laravel
       SERVICE_TAGS: dev
       SERVICE_NAME: mysql
+    networks:
+      - laravel
+
+  redis:
+    image: redis
+    restart: always
+    ports:
+      - "6379:6379"
+    command: redis-server --appendonly yes
     networks:
       - laravel
