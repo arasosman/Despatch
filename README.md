@@ -2,6 +2,7 @@
 
 Static code analysis and tests were given importance in the project.
 
+#### please don't forget to add app_key to .env file. otherwise it won't connect to the market api.
 
 ### Installation
 
@@ -15,6 +16,7 @@ Static code analysis and tests were given importance in the project.
 please don't forget to add app_key to .env file. otherwise it won't connect to the market api.
 
 ### Migration
+migration is required.
 
     docker-compose exec app php artisan migrate
 
@@ -32,7 +34,9 @@ all running commands, Jobs and all other details. You can watch on Laravel Teles
 
     docker-compose exec app composer test
 
-    if use windows exec this 
+if use windows exec this 
+
     composer test_windows
 
-    test indcluded PhpCS, PhpMD and PhpUnit
+test indcluded PhpCS, PhpMD and PhpUnit
+I plan to add more detailed tests about import operations in a more comfortable time.

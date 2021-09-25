@@ -59,7 +59,7 @@ class OrderSyncCommand extends Command
     }
 
     /**
-     * @param int $last_page
+     * @param int $lastPage
      * @param array $params
      */
     private function orderListNextPagesAddQueue(int $lastPage, array $params): void
