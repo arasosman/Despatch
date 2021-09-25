@@ -3,6 +3,7 @@
 namespace App\Services;
 
 use App\Services\Contracts\MarketApiServiceContract;
+use Exception;
 use Illuminate\Auth\Access\AuthorizationException;
 
 class MarketApiService extends BaseService implements MarketApiServiceContract

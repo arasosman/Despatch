@@ -19,7 +19,7 @@ use Illuminate\Support\Carbon;
  * @property string $city
  * @property string $country
  * @property string $state
- * @property string $post_code
+ * @property string $postcode
  * @property Carbon|null $created_at
  * @property Carbon|null $updated_at
  *
@@ -33,6 +33,9 @@ class Address extends Model
     use HasFactory;
 
     protected $fillable = [
+        'id',
+        'created_at',
+        'updated_at',
         'name',
         'phone',
         'line_1',
@@ -40,6 +43,6 @@ class Address extends Model
         'city',
         'country',
         'state',
-        'post_code'
+        'postcode'
     ];
 }

@@ -20,8 +20,8 @@ class CreateOrdersTable extends Migration
             $table->foreignId('customer_id')->constrained('customers')->cascadeOnDelete();
             $table->foreignId('company_id')->constrained('companies')->cascadeOnDelete();
             $table->string('type', 20);
-            $table->foreignId('billing_address_id')->constrained('address')->cascadeOnDelete();
-            $table->foreignId('shipping_address_id')->constrained('address')->cascadeOnDelete();
+            $table->foreignId('billing_address_id')->constrained('addresses')->cascadeOnDelete();
+            $table->foreignId('shipping_address_id')->constrained('addresses')->cascadeOnDelete();
             $table->float('total');
             $table->timestamps();
         });

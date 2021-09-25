@@ -18,7 +18,7 @@ class CreateProductsTable extends Migration
             $table->string('title')->index();
             $table->text('description')->nullable();
             $table->string('image')->nullable();
-            $table->integer('sku')->index();
+            $table->bigInteger('sku')->index();
             $table->float('price');
             $table->timestamps();
         });

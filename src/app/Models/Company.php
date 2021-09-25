@@ -23,4 +23,10 @@ use Illuminate\Support\Carbon;
 class Company extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'id',
+        'created_at',
+        'updated_at'
+    ];
 }

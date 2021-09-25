@@ -35,6 +35,9 @@ class Product extends Model
     ];
 
     protected $fillable = [
+        'id',
+        'created_at',
+        'updated_at',
         "title",
         "description",
         "image",
